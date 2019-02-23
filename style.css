@@ -1,9 +1,11 @@
 html {
     background: #d4feb4;
+    font-family: sans-serif;
     /* overflow: hidden; */
 }
 h1 {
     text-align: center;
+    font-weight: normal !important;
 }
 .searchNewsDiv {
     /* overflow-y: auto; */
@@ -44,6 +46,9 @@ a .searchIn {
     width: 27px;
     margin-left: -4px;
     padding-left: 19px;
+}
+a i {
+    color: #fff;
 }
 @media screen and (max-width: 766px) {
     .imageClass {

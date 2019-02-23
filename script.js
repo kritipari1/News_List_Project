@@ -52,7 +52,6 @@ app.controller("myCtrl", function($scope, $http) {
             }
             else {
                  $scope.flagFalse = 0;
-                 $scope.$apply();
                 return false;
             }
         }, 30000);
