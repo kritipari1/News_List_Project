@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="style.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+  <div ng-app="myApp" ng-controller="myCtrl">
+      <h1>Latest News Search</h1>
+      <div class="searchNewsDiv">
+          <p ng-hide="flagFalse == 0" style="float:right;">Auto Refresh in <span id="some_div"></span></p>
+        <form name="searchuser" >
+                <input
+                  type="search"
+                  class="form-control searchIn"
+                  required=""
+                  placeholder="Username to find"
+                  ng-model="username"
+                />
+                
+                <a type="submit" ng-click="search(username)" class="searchIn" href="#/{{ username }}" role="tab" data-toggle="tab"><i class="fa fa-search searchIn" type="submit"></i></a>
+              </form>
+              <div>
+              <div ng-repeat="x in orders1" class="newsContent">
+                  <div ng-if="x.urlToImage">
+                      <img src={{x.urlToImage}} class="imageClass"/>
+                  </div>
+                  <div style="margin-left: 2%;" class="contentClass">
+                    <p>{{x.author}}</p>
+                      <p>{{x.description}}</p>
+                      <p>{{x.title}}</p>
+                  </div>
+              </div>
+            </div>
+            </div>
+  </div>
+
+  </body>
+</html>

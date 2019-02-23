@@ -1,0 +1,91 @@
+html {
+    background: #d4feb4;
+    /* overflow: hidden; */
+}
+h1 {
+    text-align: center;
+}
+.searchNewsDiv {
+    /* overflow-y: auto; */
+    border: 1px solid #aaa;
+    background: #fff;
+    padding: 2%;
+    margin: 0 5%;
+}
+input[type="search"] {
+    width: 93%;
+    padding: 1%;
+}
+button {
+    height: 45px;
+    /* position: absolute; */
+    background: #8ed558;
+    border: none;
+    /* right: 102px;
+    top: 158px; */
+    padding: 13px;
+    color: #fff;
+    width: 6%;
+}
+.newsContent {
+    display: flex !important;
+    margin-top: 2%;
+}
+.imageClass {
+    width: 10vw;
+    margin-top: 11%;
+    height: 8vw;
+
+}
+a .searchIn {
+    background: #8ed558;
+    padding: 14px;
+    display: inline-block;
+    width: 27px;
+    margin-left: -4px;
+    padding-left: 19px;
+}
+@media screen and (max-width: 766px) {
+    .imageClass {
+        width: 25vw;
+        height: 20vw;
+    }
+    input[type="search"] {
+        width: 87.6%;
+        margin-top: 4%;
+    }
+    button {
+        height: 27px;
+        right: 40px;
+        top: 139px;
+        padding: 8px;
+    }
+    a .searchIn {
+        padding: 4px;
+
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px){
+    .newsContent {
+    display: inline !important;
+    width: 50%;
+    float: left;
+
+    }
+    .newsContent div {
+        display: inline;
+    }
+    .contentClass {
+        margin-left: 2%;
+        display: inline-block;
+    }
+    input[type="search"] {
+        width: 92%;
+        padding: 1%;
+        margin-top: 13px;
+    }
+    a .searchIn {
+        padding: 10px;
+    }
+    
+}
