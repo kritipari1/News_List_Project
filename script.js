@@ -45,6 +45,7 @@ app.controller("myCtrl", function($scope, $http) {
           $scope.flagLeftCheck = false;
           if (number >= (count + 1) * 10) {
             $scope.orders1 = rdata.articles.slice(count * 10, (count + 1) * 10);
+            $scope.flagFalse = 1;
             $scope.$apply();
             count++;
              timeLeft = 29;
@@ -52,7 +53,9 @@ app.controller("myCtrl", function($scope, $http) {
             }
             else {
                  $scope.flagFalse = 0;
-                return false;
+                 $scope.$apply();
+                 clearTimeout(countdown);
+                 
             }
         }, 30000);
          var timeLeft = 29;
